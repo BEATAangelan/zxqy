@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal"-->
+        <!--&gt;-->
+        <!--<TextView-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="商品"-->
+            <!--/>-->
+        <!--<TextView-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="详情"-->
+            <!--android:layout_weight="1"-->
+            <!--/><TextView-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="评论"-->
+        <!--android:layout_weight="1"-->
+        <!--/>-->
+    <!--</LinearLayout>-->
+    <!--<com.youth.banner.Banner-->
+        <!--android:id="@+id/banner_de"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="200dp">-->
+    <!--</com.youth.banner.Banner>-->
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+        <!--<TextView-->
+            <!--android:id="@+id/text_details_price"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="哎呦我去"-->
+            <!--android:textColor="#f00"-->
+            <!--/>-->
+        <!--<TextView-->
+            <!--android:id="@+id/sold"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="aaaaa"-->
+            <!--/>-->
+    <!--</LinearLayout>-->
+    <!--<TextView-->
+        <!--android:id="@+id/text_details"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content" />-->
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+        <!--<Button-->
+            <!--android:id="@+id/but_addshop"-->
+            <!--android:layout_width="40dp"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:layout_marginTop="127dp"-->
+            <!--android:background="@mipmap/common_btn_add_n_hdpi"-->
+            <!--android:layout_alignParentRight="true" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/but_buyshop"-->
+            <!--android:layout_width="40dp"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:layout_marginTop="188dp"-->
+            <!--android:background="@mipmap/common_btn_buy_n_hdpi"-->
+            <!--android:layout_alignParentRight="true" />-->
+        <!--<WebView-->
+            <!--android:id="@+id/webView"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
+        <!--</WebView>-->
+    <!--</RelativeLayout>-->
+</LinearLayout>

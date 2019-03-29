@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">zxqy</string>
+    <string name="w">成功！</string>
+    <string name="e">失败了呦！</string>
+    <string name="t">请输入搜索的内容</string>
+    <string name="y">热销商品</string>
+    <string name="u">魔力时尚</string>
+    <string name="i">品质生活</string>
+    <string name="wdqz">我的圈子</string>
+    <string name="title_activity_pay">PayActivity</string>
+</resources>

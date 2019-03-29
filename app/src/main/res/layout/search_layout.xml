@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/shape_ground"
+    android:layout_marginLeft="@dimen/dp_2"
+    android:layout_marginRight="@dimen/dp_6"
+    android:layout_marginTop="@dimen/dp_6"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/search_image"
+        android:layout_width="@dimen/dp_150"
+        android:layout_height="@dimen/dp_170"
+        android:layout_marginLeft="@dimen/dp_5"
+        fresco:roundedCornerRadius="8dp"
+
+    />
+    <TextView
+        android:id="@+id/search_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:lines="1" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#f00"
+            android:layout_marginLeft="25dp"
+            android:text="¥"
+            />
+        <TextView
+            android:id="@+id/search_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#f00"
+            />
+    </LinearLayout>
+</LinearLayout>

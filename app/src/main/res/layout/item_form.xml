@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/dp_5"
+    >
+    <ImageView
+        android:id="@+id/image_form"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="@dimen/dp_100" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_100"
+        android:layout_toRightOf="@+id/image_form"
+        >
+        <TextView
+            android:id="@+id/text_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            />
+
+        <TextView
+            android:id="@+id/shopprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#f00"
+            android:textSize="16sp"
+            android:layout_alignParentBottom="true"
+            android:text="dffffffffd"
+            />
+        <com.example.dell.zxqy.goods.myview.ShoppingCarView
+            android:id="@+id/ShoppingCarView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            >
+        </com.example.dell.zxqy.goods.myview.ShoppingCarView>
+    </RelativeLayout>
+</RelativeLayout>
