@@ -13,6 +13,7 @@ import com.example.dell.zxqy.notwork.utils.CrashHandler;
 import com.facebook.cache.disk.DiskCacheConfig;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.imagepipeline.core.ImagePipelineConfig;
+import com.tencent.bugly.crashreport.CrashReport;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -26,7 +27,6 @@ public class MyApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        //OnErr();
         // android 7.0系统解决拍照的问题
         StrictMode.VmPolicy.Builder builders = new StrictMode.VmPolicy.Builder();
         StrictMode.setVmPolicy(builders.build());
@@ -50,6 +50,7 @@ public class MyApp extends Application {
         StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
         StrictMode.setVmPolicy(builder.build());
         builder.detectFileUriExposure();
+        onError();
     }
     public static void saveBitmap(Bitmap bitmap, String path, int quality) throws IOException {
         String dir = path.substring(0, path.lastIndexOf("/"));
@@ -80,7 +81,11 @@ public class MyApp extends Application {
         return context;
     }
     //线程捕获异常
-    public void OnErr(){
-        Thread.setDefaultUncaughtExceptionHandler(new CrashHandler());
+    public void onError(){
+        CrashReport.UserStrategy strategy = new CrashReport.UserStrategy(this);
+        strategy.setAppChannel("myChannel");
+        strategy.setAppVersion("1.0");
+        strategy.setAppPackageName("com.example.dell.zxqy");
+        CrashReport.initCrashReport(this,"2c57b0677a",false,strategy);
     }
 }

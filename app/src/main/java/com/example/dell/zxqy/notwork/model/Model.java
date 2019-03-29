@@ -2,6 +2,8 @@ package com.example.dell.zxqy.notwork.model;
 
 import com.example.dell.zxqy.notwork.utils.MCallBack;
 
+import java.io.File;
+import java.util.List;
 import java.util.Map;
 
 public interface Model{
@@ -15,4 +17,6 @@ public interface Model{
     void putRequest(String url,Class clazz,Map<String,String> map,MCallBack callBack);
    //上传头像
    void postFile(String url, Map<String, String> map,MCallBack callBack,Class clazz);
+    //多图
+    void postDuoConRequestModel(String url, Map<String,String> params, List<File> list , Class clazz , MCallBack callBack);
 }

@@ -39,6 +39,7 @@ public class OrderBeano {
         private String payAmount;
         private String payMethod;
         private String userId;
+        private long orderTime;
         private List<DetailListBean> detailList;
 
         public String getExpressCompName() {
@@ -83,6 +84,14 @@ public class OrderBeano {
 
         public String getPayMethod() {
             return payMethod;
+        }
+
+        public long getOrderTime() {
+            return orderTime;
+        }
+
+        public void setOrderTime(long orderTime) {
+            this.orderTime = orderTime;
         }
 
         public void setPayMethod(String payMethod) {

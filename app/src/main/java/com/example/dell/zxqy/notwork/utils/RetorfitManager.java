@@ -10,6 +10,7 @@ import com.example.dell.zxqy.app.MyApp;
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import java.util.prefs.Preferences;
@@ -133,6 +134,21 @@ public class RetorfitManager{
         builder.setType(MultipartBody.FORM);
         MultipartBody multipartBody = builder.build();
         return multipartBody;
+    }
+    //多图文上传
+    public void postduocon(String url, Map<String,String> params, List<File> list, HttListener httListener) {
+        MultipartBody.Part[] parts = new MultipartBody.Part[list.size()];
+        int index = 0;
+        for (File file : list) {
+            RequestBody requestBody = RequestBody.create(MediaType.parse("multipart/form-data"), file);
+            MultipartBody.Part filePart = MultipartBody.Part.createFormData("image", file.getName(), requestBody);
+            parts[index] = filePart;
+            index++;
+        }
+        mbaseApis.postDuoContent(url,params,parts)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(getObserver(httListener));
     }
     //返回数据
     private Observer getObserver(final HttListener listener){

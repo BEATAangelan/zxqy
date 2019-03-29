@@ -63,4 +63,10 @@ public class Api {
     public final static String Head = "user/verify/v1/modifyHeadPic";
     //商品评论列表
     public final static String TalkPAth="commodity/v1/CommodityCommentList?page=%d&&commodityId=%s&&count=5";
+    //删除订单
+    public final static String DelectPath="order/verify/v1/deleteOrder?orderId=%s";
+    //发布评论的接口
+    public static final String ShowTalk="commodity/verify/v1/addCommodityComment";
+    //发布圈子的接口
+    public static final String ShowC="circle/verify/v1/releaseCircle";
 }

@@ -4,6 +4,8 @@ import com.example.dell.zxqy.notwork.model.IModelmpl;
 import com.example.dell.zxqy.notwork.utils.MCallBack;
 import com.example.dell.zxqy.notwork.view.IView;
 
+import java.io.File;
+import java.util.List;
 import java.util.Map;
 
 public class IPersentermpl implements Persenter {
@@ -84,6 +86,21 @@ public class IPersentermpl implements Persenter {
          public void failed(String error) {
          }
      },clazz);
+    }
+
+    @Override
+    public void postDuoConRequestIpresenter(String url, final Map<String, String> params, final List<File> list, final Class clazz) {
+        modelmpl.postDuoConRequestModel(url, params, list, clazz, new MCallBack() {
+            @Override
+            public void setData(Object data) {
+             mIView.onSuccess(data);
+            }
+
+            @Override
+            public void failed(String error) {
+
+            }
+        });
     }
 
     public void onDestory(){

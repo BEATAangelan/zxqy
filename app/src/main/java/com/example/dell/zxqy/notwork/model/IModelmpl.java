@@ -9,6 +9,8 @@ import com.example.dell.zxqy.notwork.utils.RetorfitManager;
 import com.example.dell.zxqy.user.activity.MainActivity;
 import com.google.gson.Gson;
 
+import java.io.File;
+import java.util.List;
 import java.util.Map;
 
 public class IModelmpl implements Model {
@@ -81,6 +83,23 @@ public class IModelmpl implements Model {
     @Override
     public void postFile(String url, Map<String, String> map, final MCallBack callBack, final Class clazz) {
         RetorfitManager.getInstance().postFile(url, map, new RetorfitManager.HttListener() {
+            @Override
+            public void onSuccess(String data) {
+                Gson gson = new Gson();
+                Object o = gson.fromJson(data, clazz);
+                callBack.setData(o);
+            }
+
+            @Override
+            public void onFail(String error) {
+
+            }
+        });
+    }
+
+    @Override
+    public void postDuoConRequestModel(String url, Map<String, String> params, List<File> list, final Class clazz, final MCallBack callBack) {
+        RetorfitManager.getInstance().postduocon(url, params, list, new RetorfitManager.HttListener() {
             @Override
             public void onSuccess(String data) {
                 Gson gson = new Gson();

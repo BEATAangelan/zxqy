@@ -75,7 +75,7 @@
                     android:text="微信支付"
                     android:layout_toRightOf="@id/wei"
                     android:layout_below="@+id/yue"
-                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_30"
                     />
                 <ImageView
                     android:id="@+id/zhifu"
